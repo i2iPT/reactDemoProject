@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   StyleSheet,
@@ -51,9 +50,6 @@ export default function Home(navigation) {
 }
 // eslint-disable-next-line no-shadow
 
-const ProfileScreen = (navigation) => {
-  return <Text>This is's profile</Text>;
-};
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   StyleSheet,
@@ -18,7 +17,6 @@ export default function Login(navigation) {
   const [setEmail] = useState('');
   const [setPassword] = useState('');
   return (
-    
       <View style={styles.container}>
               <Text style={styles.text}>LogIn</Text>
               <View style={styles.inputView}>
@@ -40,10 +38,9 @@ export default function Login(navigation) {
                   <Text style={styles.forgot_button}>Forgot Password?</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.loginBtn}  
-               onPress={() => navigation.navigate(Home)}>
+               onPress={() => this.props.navigation.navigate(Home)}>
                   <Text style={styles.loginText}>LOGIN</Text>
-              </TouchableOpacity>
-                 
+              </TouchableOpacity>                 
           </View>
     
   );
