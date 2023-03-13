@@ -15,10 +15,9 @@ import Login from './Screens/Login';
 import Home from './Screens/Home';
 const Stack = createNativeStackNavigator();
 export default function App() {
- 
-  return ( 
-       <NavigationContainer>
-         <Stack.Navigator>
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
         <Stack.Screen
           name="Login"
           component={Login}
@@ -26,7 +25,7 @@ export default function App() {
         />
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
-       </NavigationContainer> 
+    </NavigationContainer>
   );
 }
 // eslint-disable-next-line no-shadow

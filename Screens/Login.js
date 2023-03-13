@@ -18,38 +18,36 @@ export default function Login(navigation) {
   const [setEmail] = useState('');
   const [setPassword] = useState('');
   return (
-    
-      <View style={styles.container}>
-              <Text style={styles.text}>LogIn</Text>
-              <View style={styles.inputView}>
-                  <TextInput
-                      style={styles.TextInput}
-                      placeholder="Email."
-                      placeholderTextColor="#003f5c"
-                      onChangeText={email => setEmail(email)} />
-              </View>
-              <View style={styles.inputView}>
-                  <TextInput
-                      style={styles.TextInput}
-                      placeholder="Password."
-                      placeholderTextColor="#003f5c"
-                      secureTextEntry={true}
-                      onChangeText={password => setPassword(password)} />
-              </View>
-              <TouchableOpacity>
-                  <Text style={styles.forgot_button}>Forgot Password?</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.loginBtn}  
-               onPress={() => navigation.navigate(Home)}>
-                  <Text style={styles.loginText}>LOGIN</Text>
-              </TouchableOpacity>
-                 
-          </View>
-    
+    <View style={styles.container}>
+      <Text style={styles.text}>LogIn</Text>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Email."
+          placeholderTextColor="#003f5c"
+          onChangeText={email => setEmail(email)}
+        />
+      </View>
+      <View style={styles.inputView}>
+        <TextInput
+          style={styles.TextInput}
+          placeholder="Password."
+          placeholderTextColor="#003f5c"
+          secureTextEntry={true}
+          onChangeText={password => setPassword(password)}
+        />
+      </View>
+      <TouchableOpacity>
+        <Text style={styles.forgot_button}>Forgot Password?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.loginBtn}
+        onPress={() => navigation.navigate(Home)}>
+        <Text style={styles.loginText}>LOGIN</Text>
+      </TouchableOpacity>
+    </View>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {
